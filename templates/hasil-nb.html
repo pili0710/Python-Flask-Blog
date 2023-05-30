@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- Your content goes here -->
+
+
+<div class="page-heading">
+    <h3>Analisis Sentimen Dengan Algoritma Naive Bayes Menggunakan Metode K-Fold Cross Validation</h3>
+</div>
+<div class="page-content">
+    <section id="multiple-column-form">
+        <div class="row match-height">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Proses Algoritma Naive Bayes Menggunakan Metode K-Fold Cross Validation
+                        </h4>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-body">
+                            <form class="form" method="POST" action="{{ url_for('nb_hasil_proses') }}"
+                                enctype="multipart/form-data">
+                                <div class="row">
+                                    <div class="col-md-12 col-12">
+                                        <div class="mb-3">
+                                            <label for="formFile" class="form-label">Input file yang sudah tersimpan di
+                                                local</label>
+                                            <input class="form-control" type="file" id="formFile" name="file" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 d-flex justify-content-end">
+                                        <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
+                                        <button type="reset" class="btn btn-light-secondary me-1 mb-1">Reset</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12" id="overlay">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-center">
+                        <h5>Sedang memroses</h5>
+                    </div>
+                    <div class="card-body d-flex justify-content-center">
+                        <img src="{{ url_for('static', filename='vendors/svg-loaders/audio.svg') }}" class="me-4"
+                            style="width: 3rem" alt="audio">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

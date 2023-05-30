@@ -1,0 +1,36 @@
+</div>
+</div>
+</div>
+<script>
+    function showLoading() {
+        document.getElementById("overlay").style.visibility = "visible";
+        document.getElementById("overlay").style.opacity = 1;
+    }
+
+    // Fungsi untuk menyembunyikan overlay dan spinner
+    function hideLoading() {
+        document.getElementById("overlay").style.visibility = "hidden";
+        document.getElementById("overlay").style.opacity = 0;
+    }
+
+    // Panggil fungsi showLoading saat submit form
+    document.querySelector('form').addEventListener('submit', function (e) {
+        showLoading();
+    });
+
+    // Panggil fungsi hideLoading saat load halaman selesai
+    window.addEventListener('load', function () {
+        hideLoading();
+    });
+</script>
+<script src="{{ url_for('static', filename='vendors/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='vendors/apexcharts/apexcharts.js') }}"></script>
+<script src="{{ url_for('static', filename='js/pages/dashboard.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+
+</html>

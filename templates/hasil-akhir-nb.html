@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- Your content goes here -->
+
+
+<div class="page-heading">
+    <h3>Analisis Sentimen Dengan Algoritma Naive Bayes Menggunakan Metode K-Fold Cross Validation</h3>
+</div>
+<div class="page-content">
+    <section id="multiple-column-form">
+        <div class="row match-height">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Hasil Algoritma Naive Bayes Menggunakan Metode K-Fold Cross Validation
+                        </h4>
+                    </div>
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <div id="chart-visitors-profile"></div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p>Akurasi :{{akurasi}}%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    let optionsVisitorsProfile = {
+        series: [{{positif}}, {{negatif}}],
+        labels: ["Komentar Positif", "Komentar Negatif"],
+        colors: ["#435ebe", "#55c6e8"],
+        chart: {
+            type: "donut",
+            width: "100%",
+            height: "450px",
+        },
+        legend: {
+            position: "bottom",
+        },
+        plotOptions: {
+            pie: {
+                donut: {
+                    size: "30%",
+                },
+            },
+        },
+    };
+</script>
+
+{% endblock %}

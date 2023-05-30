@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naive Bayes</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/iconly/bold.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/perfect-scrollbar/perfect-scrollbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/bootstrap-icons/bootstrap-icons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+
+    <!-- <img src="{{ url_for('static', filename='images/favicon.svg') }}" alt="favicon"> -->
+
+</head>
+
+<body>
+    <div id="app">
+        {% include 'sidebar.html' %}
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
